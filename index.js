@@ -6,7 +6,7 @@ const app = express();
 Dotenv.config();
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.DB_URL)
 .then(()=>{
     console.log('successfully connected to mongoDb');
 }).catch((err)=>{
